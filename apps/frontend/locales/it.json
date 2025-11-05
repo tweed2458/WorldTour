@@ -1,0 +1,92 @@
+{
+  "common": {
+    "search": "Cerca",
+    "filter": "Filtra",
+    "sort": "Ordina",
+    "close": "Chiudi",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "success": "Successo"
+  },
+  "nav": {
+    "home": "Home",
+    "explore": "Esplora",
+    "tours": "Percorsi",
+    "profile": "Profilo",
+    "map": "Mappa"
+  },
+  "home": {
+    "title": "Scopri il mondo",
+    "subtitle": "Esplora musei e monumenti vicino a te",
+    "searchPlaceholder": "Cerca un museo, monumento...",
+    "nearMe": "Vicino a me",
+    "popular": "Popolari",
+    "recommended": "Consigliati per te"
+  },
+  "place": {
+    "rating": "Valutazione",
+    "noRating": "Non ancora valutato",
+    "addRating": "Aggiungi valutazione",
+    "mustSee": "Da non perdere",
+    "visitTimes": "Orari di apertura",
+    "bestTime": "Momento migliore",
+    "pointsOfInterest": "Punti di interesse",
+    "description": "Descrizione",
+    "photos": "Foto",
+    "audioGuide": "Guida audio",
+    "getBadge": "Ottieni badge",
+    "badgeEarned": "Badge ottenuto!",
+    "directions": "Indicazioni",
+    "share": "Condividi",
+    "type": {
+      "museum": "Museo",
+      "monument": "Monumento",
+      "poi": "Punto di interesse",
+      "church": "Chiesa",
+      "castle": "Castello",
+      "park": "Parco"
+    }
+  },
+  "tour": {
+    "title": "Percorsi",
+    "createNew": "Crea nuovo percorso",
+    "duration": "Durata",
+    "distance": "Distanza",
+    "places": "Luoghi",
+    "startTour": "Inizia il percorso",
+    "preferences": "Preferenze",
+    "interests": {
+      "art": "Arte",
+      "history": "Storia",
+      "architecture": "Architettura",
+      "science": "Scienza",
+      "nature": "Natura",
+      "culture": "Cultura"
+    }
+  },
+  "profile": {
+    "title": "Il mio profilo",
+    "badges": "I miei badge",
+    "visitedPlaces": "Luoghi visitati",
+    "myInterests": "I miei interessi",
+    "settings": "Impostazioni",
+    "language": "Lingua",
+    "logout": "Esci",
+    "login": "Accedi",
+    "register": "Registrati"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Nome",
+    "login": "Accedi",
+    "register": "Crea account",
+    "forgotPassword": "Password dimenticata?",
+    "noAccount": "Non hai un account?",
+    "hasAccount": "Hai già un account?"
+  }
+}

@@ -1,0 +1,107 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int       @id @default(autoincrement())
+  email          String    @unique
+  name           String
+  password       String
+  interests      String[]  @default([])
+  visitedPlaces  Int[]     @default([])
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  ratings        Rating[]
+  badges         UserBadge[]
+}
+
+model Place {
+  id               Int       @id @default(autoincrement())
+  name             String
+  type             String
+  latitude         Float
+  longitude        Float
+  rating           Float     @default(0)
+  ratingsCount     Int       @default(0)
+  description      String    @db.Text
+  mustSee          String[]  @default([])
+  visitTimes       String
+  bestTime         String?
+  photos           String[]  @default([])
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  pointsOfInterest PointOfInterest[]
+  ratings          Rating[]
+  badge            Badge?
+}
+
+model PointOfInterest {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String   @db.Text
+  photos      String[] @default([])
+  audioGuide  String?
+  placeId     Int
+  place       Place    @relation(fields: [placeId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Badge {
+  id          String      @id
+  name        String
+  icon        String
+  description String
+  placeId     Int         @unique
+  place       Place       @relation(fields: [placeId], references: [id], onDelete: Cascade)
+  createdAt   DateTime    @default(now())
+
+  users       UserBadge[]
+}
+
+model UserBadge {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  badgeId   String
+  earnedAt  DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge     Badge    @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeId])
+}
+
+model Rating {
+  id        Int      @id @default(autoincrement())
+  rating    Int
+  comment   String?
+  userId    Int
+  placeId   Int
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  place     Place    @relation(fields: [placeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, placeId])
+}
+
+model Tour {
+  id              Int      @id @default(autoincrement())
+  name            String
+  description     String?
+  placeIds        Int[]    @default([])
+  duration        Int
+  distance        Float?
+  userPreferences String[] @default([])
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

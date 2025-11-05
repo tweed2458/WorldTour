@@ -1,0 +1,92 @@
+{
+  "common": {
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "close": "Fechar",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Sucesso"
+  },
+  "nav": {
+    "home": "Início",
+    "explore": "Explorar",
+    "tours": "Roteiros",
+    "profile": "Perfil",
+    "map": "Mapa"
+  },
+  "home": {
+    "title": "Descubra o mundo",
+    "subtitle": "Explore museus e monumentos perto de você",
+    "searchPlaceholder": "Pesquisar um museu, monumento...",
+    "nearMe": "Perto de mim",
+    "popular": "Populares",
+    "recommended": "Recomendados para você"
+  },
+  "place": {
+    "rating": "Avaliação",
+    "noRating": "Ainda não avaliado",
+    "addRating": "Adicionar avaliação",
+    "mustSee": "Imperdíveis",
+    "visitTimes": "Horários de visita",
+    "bestTime": "Melhor horário",
+    "pointsOfInterest": "Pontos de interesse",
+    "description": "Descrição",
+    "photos": "Fotos",
+    "audioGuide": "Guia de áudio",
+    "getBadge": "Obter emblema",
+    "badgeEarned": "Emblema conquistado!",
+    "directions": "Direções",
+    "share": "Compartilhar",
+    "type": {
+      "museum": "Museu",
+      "monument": "Monumento",
+      "poi": "Ponto de interesse",
+      "church": "Igreja",
+      "castle": "Castelo",
+      "park": "Parque"
+    }
+  },
+  "tour": {
+    "title": "Roteiros",
+    "createNew": "Criar novo roteiro",
+    "duration": "Duração",
+    "distance": "Distância",
+    "places": "Lugares",
+    "startTour": "Iniciar roteiro",
+    "preferences": "Preferências",
+    "interests": {
+      "art": "Arte",
+      "history": "História",
+      "architecture": "Arquitetura",
+      "science": "Ciência",
+      "nature": "Natureza",
+      "culture": "Cultura"
+    }
+  },
+  "profile": {
+    "title": "Meu perfil",
+    "badges": "Meus emblemas",
+    "visitedPlaces": "Lugares visitados",
+    "myInterests": "Meus interesses",
+    "settings": "Configurações",
+    "language": "Idioma",
+    "logout": "Sair",
+    "login": "Entrar",
+    "register": "Cadastrar"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Senha",
+    "name": "Nome",
+    "login": "Entrar",
+    "register": "Criar conta",
+    "forgotPassword": "Esqueceu a senha?",
+    "noAccount": "Não tem uma conta?",
+    "hasAccount": "Já tem uma conta?"
+  }
+}

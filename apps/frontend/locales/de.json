@@ -1,0 +1,92 @@
+{
+  "common": {
+    "search": "Suchen",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "close": "Schließen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "success": "Erfolg"
+  },
+  "nav": {
+    "home": "Startseite",
+    "explore": "Entdecken",
+    "tours": "Touren",
+    "profile": "Profil",
+    "map": "Karte"
+  },
+  "home": {
+    "title": "Entdecke die Welt",
+    "subtitle": "Erkunde Museen und Denkmäler in deiner Nähe",
+    "searchPlaceholder": "Suche ein Museum, Denkmal...",
+    "nearMe": "In meiner Nähe",
+    "popular": "Beliebt",
+    "recommended": "Empfohlen für dich"
+  },
+  "place": {
+    "rating": "Bewertung",
+    "noRating": "Noch nicht bewertet",
+    "addRating": "Bewertung hinzufügen",
+    "mustSee": "Sehenswürdigkeiten",
+    "visitTimes": "Öffnungszeiten",
+    "bestTime": "Beste Zeit",
+    "pointsOfInterest": "Sehenswürdigkeiten",
+    "description": "Beschreibung",
+    "photos": "Fotos",
+    "audioGuide": "Audioführer",
+    "getBadge": "Abzeichen erhalten",
+    "badgeEarned": "Abzeichen erhalten!",
+    "directions": "Wegbeschreibung",
+    "share": "Teilen",
+    "type": {
+      "museum": "Museum",
+      "monument": "Denkmal",
+      "poi": "Sehenswürdigkeit",
+      "church": "Kirche",
+      "castle": "Schloss",
+      "park": "Park"
+    }
+  },
+  "tour": {
+    "title": "Touren",
+    "createNew": "Neue Tour erstellen",
+    "duration": "Dauer",
+    "distance": "Entfernung",
+    "places": "Orte",
+    "startTour": "Tour starten",
+    "preferences": "Einstellungen",
+    "interests": {
+      "art": "Kunst",
+      "history": "Geschichte",
+      "architecture": "Architektur",
+      "science": "Wissenschaft",
+      "nature": "Natur",
+      "culture": "Kultur"
+    }
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "badges": "Meine Abzeichen",
+    "visitedPlaces": "Besuchte Orte",
+    "myInterests": "Meine Interessen",
+    "settings": "Einstellungen",
+    "language": "Sprache",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  },
+  "auth": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "name": "Name",
+    "login": "Anmelden",
+    "register": "Konto erstellen",
+    "forgotPassword": "Passwort vergessen?",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits ein Konto?"
+  }
+}

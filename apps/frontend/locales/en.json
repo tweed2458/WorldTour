@@ -1,0 +1,92 @@
+{
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success"
+  },
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "tours": "Tours",
+    "profile": "Profile",
+    "map": "Map"
+  },
+  "home": {
+    "title": "Discover the world",
+    "subtitle": "Explore museums and monuments near you",
+    "searchPlaceholder": "Search for a museum, monument...",
+    "nearMe": "Near me",
+    "popular": "Popular",
+    "recommended": "Recommended for you"
+  },
+  "place": {
+    "rating": "Rating",
+    "noRating": "Not rated yet",
+    "addRating": "Add rating",
+    "mustSee": "Must see",
+    "visitTimes": "Opening hours",
+    "bestTime": "Best time to visit",
+    "pointsOfInterest": "Points of interest",
+    "description": "Description",
+    "photos": "Photos",
+    "audioGuide": "Audio guide",
+    "getBadge": "Get badge",
+    "badgeEarned": "Badge earned!",
+    "directions": "Directions",
+    "share": "Share",
+    "type": {
+      "museum": "Museum",
+      "monument": "Monument",
+      "poi": "Point of interest",
+      "church": "Church",
+      "castle": "Castle",
+      "park": "Park"
+    }
+  },
+  "tour": {
+    "title": "Tours",
+    "createNew": "Create new tour",
+    "duration": "Duration",
+    "distance": "Distance",
+    "places": "Places",
+    "startTour": "Start tour",
+    "preferences": "Preferences",
+    "interests": {
+      "art": "Art",
+      "history": "History",
+      "architecture": "Architecture",
+      "science": "Science",
+      "nature": "Nature",
+      "culture": "Culture"
+    }
+  },
+  "profile": {
+    "title": "My profile",
+    "badges": "My badges",
+    "visitedPlaces": "Visited places",
+    "myInterests": "My interests",
+    "settings": "Settings",
+    "language": "Language",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "login": "Sign in",
+    "register": "Create account",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  }
+}

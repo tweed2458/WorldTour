@@ -1,0 +1,92 @@
+{
+  "common": {
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès"
+  },
+  "nav": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "tours": "Parcours",
+    "profile": "Profil",
+    "map": "Carte"
+  },
+  "home": {
+    "title": "Découvrez le monde",
+    "subtitle": "Explorez les musées et monuments près de chez vous",
+    "searchPlaceholder": "Rechercher un musée, monument...",
+    "nearMe": "Près de moi",
+    "popular": "Populaires",
+    "recommended": "Recommandés pour vous"
+  },
+  "place": {
+    "rating": "Note",
+    "noRating": "Pas encore noté",
+    "addRating": "Donner une note",
+    "mustSee": "Incontournables",
+    "visitTimes": "Horaires de visite",
+    "bestTime": "Meilleur moment",
+    "pointsOfInterest": "Points d'intérêt",
+    "description": "Description",
+    "photos": "Photos",
+    "audioGuide": "Guide audio",
+    "getBadge": "Obtenir le badge",
+    "badgeEarned": "Badge obtenu !",
+    "directions": "Itinéraire",
+    "share": "Partager",
+    "type": {
+      "museum": "Musée",
+      "monument": "Monument",
+      "poi": "Point d'intérêt",
+      "church": "Église",
+      "castle": "Château",
+      "park": "Parc"
+    }
+  },
+  "tour": {
+    "title": "Parcours",
+    "createNew": "Créer un parcours",
+    "duration": "Durée",
+    "distance": "Distance",
+    "places": "Lieux",
+    "startTour": "Commencer le parcours",
+    "preferences": "Préférences",
+    "interests": {
+      "art": "Art",
+      "history": "Histoire",
+      "architecture": "Architecture",
+      "science": "Science",
+      "nature": "Nature",
+      "culture": "Culture"
+    }
+  },
+  "profile": {
+    "title": "Mon profil",
+    "badges": "Mes badges",
+    "visitedPlaces": "Lieux visités",
+    "myInterests": "Mes centres d'intérêt",
+    "settings": "Paramètres",
+    "language": "Langue",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "register": "S'inscrire"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mot de passe",
+    "name": "Nom",
+    "login": "Se connecter",
+    "register": "Créer un compte",
+    "forgotPassword": "Mot de passe oublié ?",
+    "noAccount": "Pas encore de compte ?",
+    "hasAccount": "Déjà un compte ?"
+  }
+}
