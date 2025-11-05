@@ -26,6 +26,15 @@ await fastify.register(jwt, {
 // Add Prisma to fastify instance
 fastify.decorate('prisma', prisma)
 
+// Add authentication decorator
+fastify.decorate('authenticate', async (request: any, reply: any) => {
+  try {
+    await request.jwtVerify()
+  } catch (err) {
+    reply.status(401).send({ error: 'Unauthorized' })
+  }
+})
+
 // Health check
 fastify.get('/health', async () => {
   return { status: 'ok', timestamp: new Date().toISOString() }

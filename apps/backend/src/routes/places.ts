@@ -1,6 +1,5 @@
 import { FastifyInstance } from 'fastify'
 import { calculateDistance } from '../utils/distance.js'
-import { authenticate } from '../utils/auth.js'
 
 interface PlacesQuery {
   q?: string
@@ -168,7 +167,7 @@ export default async function placesRoutes(fastify: FastifyInstance) {
   // Rate a place
   fastify.post<{ Params: { id: string }, Body: RatingBody }>(
     '/places/:id/ratings',
-    { onRequest: [authenticate] },
+    { onRequest: [fastify.authenticate] },
     async (request, reply) => {
       const placeId = parseInt(request.params.id)
       const { rating, comment } = request.body

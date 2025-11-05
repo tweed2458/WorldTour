@@ -1,5 +1,4 @@
 import { FastifyInstance } from 'fastify'
-import { authenticate } from '../utils/auth.js'
 
 interface UpdateInterestsBody {
   interests: string[]
@@ -16,7 +15,7 @@ interface AddBadgeBody {
 export default async function usersRoutes(fastify: FastifyInstance) {
   // Get current user
   fastify.get('/me', {
-    onRequest: [authenticate]
+    onRequest: [fastify.authenticate]
   }, async (request) => {
     const userId = request.user!.id
 
@@ -59,7 +58,7 @@ export default async function usersRoutes(fastify: FastifyInstance) {
 
   // Update user interests
   fastify.put<{ Body: UpdateInterestsBody }>('/me/interests', {
-    onRequest: [authenticate]
+    onRequest: [fastify.authenticate]
   }, async (request) => {
     const userId = request.user!.id
     const { interests } = request.body
@@ -99,7 +98,7 @@ export default async function usersRoutes(fastify: FastifyInstance) {
 
   // Add visited place
   fastify.post<{ Body: AddVisitedBody }>('/me/visited', {
-    onRequest: [authenticate]
+    onRequest: [fastify.authenticate]
   }, async (request, reply) => {
     const userId = request.user!.id
     const { placeId } = request.body
@@ -171,7 +170,7 @@ export default async function usersRoutes(fastify: FastifyInstance) {
 
   // Add badge
   fastify.post<{ Body: AddBadgeBody }>('/me/badges', {
-    onRequest: [authenticate]
+    onRequest: [fastify.authenticate]
   }, async (request, reply) => {
     const userId = request.user!.id
     const { badgeId } = request.body
