@@ -38,12 +38,18 @@ npm install
 cd apps/backend
 cp .env.example .env
 # Éditer .env avec vos paramètres PostgreSQL
-npm run db:migrate
+
+# Initialiser la base (développement)
+npm run db:generate
+npm run db:push
+npm run db:seed
 
 # Démarrer les applications
 cd ../..
 npm run dev
 ```
+
+**⚠️ Problèmes d'installation ?** Consultez le [Guide de Dépannage](TROUBLESHOOTING.md)
 
 L'application sera accessible sur :
 - Frontend : http://localhost:3000

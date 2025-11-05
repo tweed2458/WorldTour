@@ -56,16 +56,33 @@ HOST=0.0.0.0
 
 #### c. Initialiser la base de données
 
+**Option 1 : Avec db:push (Recommandé pour le développement)**
+
 ```bash
 # Générer le client Prisma
 npm run db:generate
 
-# Exécuter les migrations
+# Synchroniser le schéma avec la base de données
+npm run db:push
+
+# Peupler avec des données d'exemple
+npm run db:seed
+```
+
+**Option 2 : Avec migrations (Pour la production)**
+
+```bash
+# Générer le client Prisma
+npm run db:generate
+
+# Créer et exécuter les migrations
 npm run db:migrate
 
 # Peupler avec des données d'exemple
 npm run db:seed
 ```
+
+**Note:** Si vous rencontrez une erreur de syntaxe avec `db:migrate`, utilisez `db:push` qui est plus simple pour le développement local.
 
 ### 4. Configurer le Frontend
 
