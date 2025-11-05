@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
-    '@nuxt/icon'
+    'nuxt-icon'
   ],
 
   // Mobile-first configuration
