@@ -11,16 +11,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "^1.0.0",
-    "@nuxtjs/i18n": "^8.0.0",
-    "@pinia/nuxt": "^0.5.1",
-    "nuxt": "^3.13.0",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.0",
-    "vue-router": "^4.2.5"
+    "nuxt": "^3.13.2",
+    "@nuxt/icon": "^1.5.5",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@pinia/nuxt": "^0.5.5",
+    "pinia": "^2.2.4",
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4",
-    "sass": "^1.69.5"
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "sass": "^1.79.5",
+    "typescript": "^5.6.3"
   }
 }

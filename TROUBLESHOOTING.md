@@ -2,7 +2,83 @@
 
 ## 🔧 Problèmes Courants et Solutions
 
-### 1. Erreur "ERREUR: erreur de syntaxe sur ou près de « WITH »" lors de `db:migrate`
+### 1. Erreur "does not provide an export named 'getActiveHead'" (Frontend)
+
+**Symptôme:**
+```
+does not provide an export named 'getActiveHead'
+```
+ou erreurs similaires au démarrage du frontend.
+
+**Cause:** Incompatibilité de versions entre Nuxt et ses modules, ou cache corrompu.
+
+**Solutions:**
+
+#### Solution A : Utiliser le script de réinitialisation (Recommandé)
+
+**Windows:**
+```bash
+# À la racine du projet
+reset-frontend.bat
+```
+
+**macOS/Linux:**
+```bash
+# À la racine du projet
+chmod +x reset-frontend.sh
+./reset-frontend.sh
+```
+
+#### Solution B : Réinitialisation manuelle
+
+```bash
+cd apps/frontend
+
+# Supprimer les caches et dépendances
+rm -rf node_modules .nuxt .output dist package-lock.json
+
+# Réinstaller avec les bonnes versions
+npm install
+
+# Démarrer
+npm run dev
+```
+
+**Windows (PowerShell):**
+```powershell
+cd apps\frontend
+
+# Supprimer les caches et dépendances
+Remove-Item -Recurse -Force node_modules, .nuxt, .output, dist, package-lock.json -ErrorAction SilentlyContinue
+
+# Réinstaller
+npm install
+
+# Démarrer
+npm run dev
+```
+
+#### Solution C : Si le problème persiste
+
+```bash
+cd apps/frontend
+
+# Nettoyer le cache npm
+npm cache clean --force
+
+# Supprimer tout
+rm -rf node_modules .nuxt .output dist package-lock.json
+
+# Réinstaller avec des versions fixes
+npm install
+
+# Si toujours problématique, forcer la réinstallation
+npm install --force
+```
+
+---
+
+### 2. Erreur "ERREUR: erreur de syntaxe sur ou près de « WITH »" lors de `db:migrate`
 
 **Symptôme:**
 ```
@@ -65,7 +141,7 @@ npm run db:seed
 
 ---
 
-### 2. Erreur de connexion à PostgreSQL
+### 3. Erreur de connexion à PostgreSQL
 
 **Symptôme:**
 ```
