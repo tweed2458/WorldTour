@@ -62,7 +62,17 @@
 
       <!-- Nearby Places -->
       <section v-else-if="nearbyPlaces.length > 0" class="mb-12">
-        <h2 class="text-2xl font-bold mb-6">{{ $t('home.nearMe') }}</h2>
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold">{{ $t('home.nearMe') }}</h2>
+          <NuxtLink
+            to="/map"
+            class="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+          >
+            <Icon name="mdi:map" class="text-xl" />
+            <span class="hidden sm:inline">{{ $t('home.viewOnMap') }}</span>
+            <span class="sm:hidden">{{ $t('home.map') }}</span>
+          </NuxtLink>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <PlaceCard
             v-for="place in nearbyPlaces"

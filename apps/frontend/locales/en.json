@@ -27,7 +27,16 @@
     "popular": "Popular",
     "recommended": "Recommended for you",
     "radius": "Search radius",
-    "withinRadius": "within {radius}"
+    "withinRadius": "within {radius}",
+    "viewOnMap": "View on map",
+    "map": "Map",
+    "locationError": "Location error",
+    "geolocationNotSupported": "Geolocation is not supported by your browser",
+    "permissionDenied": "You must allow access to your location",
+    "positionUnavailable": "Position unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "Unable to get your position",
+    "errorFetchingPlaces": "Error fetching places"
   },
   "place": {
     "rating": "Rating",
@@ -90,5 +99,15 @@
     "forgotPassword": "Forgot password?",
     "noAccount": "Don't have an account?",
     "hasAccount": "Already have an account?"
+  },
+  "map": {
+    "title": "Places Map",
+    "description": "Discover museums and monuments on an interactive map",
+    "placesFound": "places found",
+    "searchPrompt": "Search for nearby places",
+    "searchPromptDetails": "Click 'Near me' to find places around your location",
+    "noResults": "No places to display",
+    "noResultsHint": "Use the 'Near me' button to search for places",
+    "viewDetails": "View details"
   }
 }
