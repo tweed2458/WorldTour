@@ -81,5 +81,10 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+
+  // Nitro configuration
+  nitro: {
+    preset: 'node-server'
   }
 })

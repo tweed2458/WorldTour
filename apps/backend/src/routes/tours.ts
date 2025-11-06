@@ -12,7 +12,7 @@ interface GenerateTourBody {
 
 export default async function toursRoutes(fastify: FastifyInstance) {
   // Get all tours
-  fastify.get('/tours', async () => {
+  fastify.get('/', async () => {
     const tours = await fastify.prisma.tour.findMany({
       orderBy: { createdAt: 'desc' }
     })
@@ -68,7 +68,7 @@ export default async function toursRoutes(fastify: FastifyInstance) {
   })
 
   // Get tour by ID
-  fastify.get<{ Params: { id: string } }>('/tours/:id', async (request, reply) => {
+  fastify.get<{ Params: { id: string } }>('/:id', async (request, reply) => {
     const tourId = parseInt(request.params.id)
 
     const tour = await fastify.prisma.tour.findUnique({
@@ -124,7 +124,7 @@ export default async function toursRoutes(fastify: FastifyInstance) {
   })
 
   // Generate a tour
-  fastify.post<{ Body: GenerateTourBody }>('/tours/generate', async (request) => {
+  fastify.post<{ Body: GenerateTourBody }>('/generate', async (request) => {
     const { duration, interests, location } = request.body
 
     // Get all places

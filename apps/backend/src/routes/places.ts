@@ -22,7 +22,7 @@ interface RatingBody {
 
 export default async function placesRoutes(fastify: FastifyInstance) {
   // Get all places with filters
-  fastify.get<{ Querystring: PlacesQuery }>('/places', async (request) => {
+  fastify.get<{ Querystring: PlacesQuery }>('/', async (request) => {
     const { q, type, minRating, maxDistance, interests } = request.query
 
     const where: any = {}
@@ -75,7 +75,7 @@ export default async function placesRoutes(fastify: FastifyInstance) {
   })
 
   // Get place by ID
-  fastify.get<{ Params: { id: string } }>('/places/:id', async (request, reply) => {
+  fastify.get<{ Params: { id: string } }>('/:id', async (request, reply) => {
     const placeId = parseInt(request.params.id)
 
     const place = await fastify.prisma.place.findUnique({
@@ -111,7 +111,7 @@ export default async function placesRoutes(fastify: FastifyInstance) {
   })
 
   // Get nearby places
-  fastify.get<{ Querystring: NearbyQuery }>('/places/nearby', async (request) => {
+  fastify.get<{ Querystring: NearbyQuery }>('/nearby', async (request) => {
     const { lat, lng, radius = '5000' } = request.query
 
     const userLat = parseFloat(lat)
@@ -166,7 +166,7 @@ export default async function placesRoutes(fastify: FastifyInstance) {
 
   // Rate a place
   fastify.post<{ Params: { id: string }, Body: RatingBody }>(
-    '/places/:id/ratings',
+    '/:id/ratings',
     { onRequest: [fastify.authenticate] },
     async (request, reply) => {
       const placeId = parseInt(request.params.id)
