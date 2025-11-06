@@ -7,6 +7,7 @@ import authRoutes from './routes/auth.js'
 import placesRoutes from './routes/places.js'
 import usersRoutes from './routes/users.js'
 import toursRoutes from './routes/tours.js'
+import adminRoutes from './routes/admin.js'
 
 const prisma = new PrismaClient()
 const fastify = Fastify({
@@ -45,6 +46,7 @@ fastify.register(authRoutes, { prefix: '/api/auth' })
 fastify.register(placesRoutes, { prefix: '/api/places' })
 fastify.register(usersRoutes, { prefix: '/api/users' })
 fastify.register(toursRoutes, { prefix: '/api/tours' })
+fastify.register(adminRoutes, { prefix: '/api/admin' })
 
 // Error handler
 fastify.setErrorHandler((error, request, reply) => {

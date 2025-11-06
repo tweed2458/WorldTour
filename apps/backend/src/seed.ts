@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+import { hashPassword } from './utils/auth.js'
 
 const prisma = new PrismaClient()
 
@@ -220,13 +221,65 @@ async function main() {
     data: {
       name: 'Test User',
       email: 'test@example.com',
-      password: '$2b$10$YourHashedPasswordHere', // bcrypt hash of "password123"
+      password: await hashPassword('password123'),
+      role: 'user',
       interests: ['art', 'history', 'architecture'],
       visitedPlaces: [louvre.id]
     }
   })
 
   console.log('✅ Test user created')
+
+  // Create admin users
+  const adminLouvre = await prisma.user.create({
+    data: {
+      name: 'Admin Louvre',
+      email: 'admin.louvre@example.com',
+      password: await hashPassword('admin123'),
+      role: 'admin',
+      interests: ['art', 'museum']
+    }
+  })
+
+  const adminEiffel = await prisma.user.create({
+    data: {
+      name: 'Admin Tour Eiffel',
+      email: 'admin.eiffel@example.com',
+      password: await hashPassword('admin123'),
+      role: 'admin',
+      interests: ['monument', 'architecture']
+    }
+  })
+
+  const adminVersailles = await prisma.user.create({
+    data: {
+      name: 'Admin Versailles',
+      email: 'admin.versailles@example.com',
+      password: await hashPassword('admin123'),
+      role: 'admin',
+      interests: ['history', 'castle']
+    }
+  })
+
+  console.log('✅ Admin users created')
+
+  // Assign admins to places
+  await prisma.place.update({
+    where: { id: louvre.id },
+    data: { adminId: adminLouvre.id }
+  })
+
+  await prisma.place.update({
+    where: { id: eiffelTower.id },
+    data: { adminId: adminEiffel.id }
+  })
+
+  await prisma.place.update({
+    where: { id: versailles.id },
+    data: { adminId: adminVersailles.id }
+  })
+
+  console.log('✅ Admins assigned to places')
 
   // Create some ratings
   await prisma.rating.create({
