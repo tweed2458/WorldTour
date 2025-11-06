@@ -27,7 +27,16 @@
     "popular": "Beliebt",
     "recommended": "Empfohlen für dich",
     "radius": "Suchradius",
-    "withinRadius": "im Umkreis von {radius}"
+    "withinRadius": "im Umkreis von {radius}",
+    "viewOnMap": "Auf Karte anzeigen",
+    "map": "Karte",
+    "locationError": "Standortfehler",
+    "geolocationNotSupported": "Geolokalisierung wird von Ihrem Browser nicht unterstützt",
+    "permissionDenied": "Sie müssen den Zugriff auf Ihren Standort erlauben",
+    "positionUnavailable": "Position nicht verfügbar",
+    "timeout": "Standortanfrage abgelaufen",
+    "unknownError": "Ihre Position konnte nicht ermittelt werden",
+    "errorFetchingPlaces": "Fehler beim Abrufen der Orte"
   },
   "place": {
     "rating": "Bewertung",
@@ -90,5 +99,15 @@
     "forgotPassword": "Passwort vergessen?",
     "noAccount": "Noch kein Konto?",
     "hasAccount": "Bereits ein Konto?"
+  },
+  "map": {
+    "title": "Ortskarte",
+    "description": "Entdecken Sie Museen und Denkmäler auf einer interaktiven Karte",
+    "placesFound": "Orte gefunden",
+    "searchPrompt": "Suche nach Orten in der Nähe",
+    "searchPromptDetails": "Klicken Sie auf 'In meiner Nähe', um Orte in Ihrer Umgebung zu finden",
+    "noResults": "Keine Orte zum Anzeigen",
+    "noResultsHint": "Verwenden Sie die Schaltfläche 'In meiner Nähe', um nach Orten zu suchen",
+    "viewDetails": "Details anzeigen"
   }
 }

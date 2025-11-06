@@ -27,7 +27,16 @@
     "popular": "Populaires",
     "recommended": "Recommandés pour vous",
     "radius": "Rayon de recherche",
-    "withinRadius": "dans un rayon de {radius}"
+    "withinRadius": "dans un rayon de {radius}",
+    "viewOnMap": "Voir sur la carte",
+    "map": "Carte",
+    "locationError": "Erreur de localisation",
+    "geolocationNotSupported": "La géolocalisation n'est pas supportée par votre navigateur",
+    "permissionDenied": "Vous devez autoriser l'accès à votre position",
+    "positionUnavailable": "Position non disponible",
+    "timeout": "La demande de localisation a expiré",
+    "unknownError": "Impossible d'obtenir votre position",
+    "errorFetchingPlaces": "Erreur lors de la récupération des lieux"
   },
   "place": {
     "rating": "Note",
@@ -90,5 +99,15 @@
     "forgotPassword": "Mot de passe oublié ?",
     "noAccount": "Pas encore de compte ?",
     "hasAccount": "Déjà un compte ?"
+  },
+  "map": {
+    "title": "Carte des lieux",
+    "description": "Découvrez les musées et monuments sur une carte interactive",
+    "placesFound": "lieux trouvés",
+    "searchPrompt": "Recherchez des lieux à proximité",
+    "searchPromptDetails": "Cliquez sur 'Près de moi' pour trouver des lieux autour de votre position",
+    "noResults": "Aucun lieu à afficher",
+    "noResultsHint": "Utilisez le bouton 'Près de moi' pour rechercher des lieux",
+    "viewDetails": "Voir les détails"
   }
 }

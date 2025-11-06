@@ -27,7 +27,16 @@
     "popular": "Populares",
     "recommended": "Recomendados para ti",
     "radius": "Radio de búsqueda",
-    "withinRadius": "en un radio de {radius}"
+    "withinRadius": "en un radio de {radius}",
+    "viewOnMap": "Ver en el mapa",
+    "map": "Mapa",
+    "locationError": "Error de ubicación",
+    "geolocationNotSupported": "La geolocalización no está soportada por tu navegador",
+    "permissionDenied": "Debes permitir el acceso a tu ubicación",
+    "positionUnavailable": "Posición no disponible",
+    "timeout": "La solicitud de ubicación ha expirado",
+    "unknownError": "No se puede obtener tu posición",
+    "errorFetchingPlaces": "Error al obtener los lugares"
   },
   "place": {
     "rating": "Calificación",
@@ -90,5 +99,15 @@
     "forgotPassword": "¿Olvidaste tu contraseña?",
     "noAccount": "¿No tienes cuenta?",
     "hasAccount": "¿Ya tienes cuenta?"
+  },
+  "map": {
+    "title": "Mapa de lugares",
+    "description": "Descubre museos y monumentos en un mapa interactivo",
+    "placesFound": "lugares encontrados",
+    "searchPrompt": "Buscar lugares cercanos",
+    "searchPromptDetails": "Haz clic en 'Cerca de mí' para encontrar lugares alrededor de tu ubicación",
+    "noResults": "No hay lugares para mostrar",
+    "noResultsHint": "Usa el botón 'Cerca de mí' para buscar lugares",
+    "viewDetails": "Ver detalles"
   }
 }
