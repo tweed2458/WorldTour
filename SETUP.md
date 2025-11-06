@@ -50,7 +50,7 @@ cp .env.example .env
 ```env
 DATABASE_URL="postgresql://user:password@localhost:5432/worldtour?schema=public"
 JWT_SECRET="votre-clé-secrète-très-sécurisée"
-PORT=3001
+PORT=3011
 HOST=0.0.0.0
 ```
 
@@ -94,7 +94,7 @@ cp .env.example .env
 Le fichier `.env` devrait contenir :
 
 ```env
-NUXT_PUBLIC_API_BASE=http://localhost:3001/api
+NUXT_PUBLIC_API_BASE=http://localhost:3011/api
 ```
 
 ## 🏃 Lancer l'application
@@ -124,8 +124,8 @@ npm run dev
 
 L'application sera accessible sur :
 - **Frontend** : http://localhost:3000
-- **Backend API** : http://localhost:3001
-- **Health check** : http://localhost:3001/health
+- **Backend API** : http://localhost:3011
+- **Health check** : http://localhost:3011/health
 
 ## 👤 Compte de test
 
@@ -240,7 +240,7 @@ npm install
 ### Le frontend ne se connecte pas au backend
 
 Vérifiez que :
-1. Le backend est démarré sur le port 3001
+1. Le backend est démarré sur le port 3011
 2. La variable `NUXT_PUBLIC_API_BASE` est correctement définie
 3. CORS est activé dans le backend
 

@@ -53,7 +53,7 @@ npm run dev
 
 L'application sera accessible sur :
 - Frontend : http://localhost:3000
-- Backend API : http://localhost:3001
+- Backend API : http://localhost:3011
 
 ## 📱 Technologies
 

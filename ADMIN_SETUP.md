@@ -91,7 +91,7 @@ npm run db:seed
 ### Option 1 : Démarrer uniquement l'admin
 
 ```bash
-# Terminal 1 : Backend (port 3001)
+# Terminal 1 : Backend (port 3011)
 npm run dev:backend
 
 # Terminal 2 : Frontend Admin (port 3002)
@@ -110,7 +110,7 @@ npm run dev:all
 ```
 ✔ Frontend:        http://localhost:3000
 ✔ Frontend Admin:  http://localhost:3002
-✔ Backend:         http://localhost:3001
+✔ Backend:         http://localhost:3011
 ```
 
 ---
@@ -309,7 +309,7 @@ WHERE p.id = :placeId;
 2. Vérifiez le port dans la config :
    ```bash
    # apps/frontend-admin/.env
-   NUXT_PUBLIC_API_BASE=http://localhost:3001/api
+   NUXT_PUBLIC_API_BASE=http://localhost:3011/api
    ```
 
 ### ❌ Erreur de CORS

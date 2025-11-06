@@ -16,7 +16,7 @@ Le panneau d'administration permet aux utilisateurs avec le rôle `admin` de :
 ### Prérequis
 
 - Node.js 18+ installé
-- Backend WorldTour en cours d'exécution (port 3001)
+- Backend WorldTour en cours d'exécution (port 3011)
 - Base de données PostgreSQL avec les données seed
 
 ### Installation
@@ -210,7 +210,7 @@ npm run postinstall  # Prépare l'application Nuxt (auto après npm install)
 Créez un fichier `.env` à la racine de `frontend-admin` :
 
 ```env
-NUXT_PUBLIC_API_BASE=http://localhost:3001/api
+NUXT_PUBLIC_API_BASE=http://localhost:3011/api
 ```
 
 ### Port personnalisé

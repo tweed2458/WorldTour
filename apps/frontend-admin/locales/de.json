@@ -12,7 +12,7 @@
   },
   "auth": {
     "email": "E-Mail",
-    "emailPlaceholder": "deine@email.de",
+    "emailPlaceholder": "deine{'@'}email.de",
     "password": "Passwort",
     "passwordPlaceholder": "••••••••",
     "login": "Anmelden",

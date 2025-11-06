@@ -11,6 +11,7 @@ declare module 'fastify' {
     user?: {
       id: number
       email: string
+      role: string
     }
   }
 }
@@ -19,5 +20,6 @@ export interface AuthRequest extends FastifyRequest {
   user: {
     id: number
     email: string
+    role: string
   }
 }

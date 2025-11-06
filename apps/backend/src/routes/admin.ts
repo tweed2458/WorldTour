@@ -31,11 +31,7 @@ export default async function adminRoutes(fastify: FastifyInstance) {
   const checkAdmin = async (request: any, reply: any) => {
     await fastify.authenticate(request, reply)
 
-    const user = await fastify.prisma.user.findUnique({
-      where: { id: request.user.id }
-    })
-
-    if (!user || user.role !== 'admin') {
+    if (!request.user || request.user.role !== 'admin') {
       return reply.status(403).send({ error: 'Access denied. Admin role required.' })
     }
   }

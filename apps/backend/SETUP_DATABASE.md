@@ -50,7 +50,7 @@ Modifier le fichier `.env` avec vos identifiants PostgreSQL :
 ```env
 DATABASE_URL="postgresql://postgres:VOTRE_MOT_DE_PASSE@localhost:5432/worldtour?schema=public"
 JWT_SECRET="changez-cette-cle-secrete-en-production"
-PORT=3001
+PORT=3011
 HOST=0.0.0.0
 ```
 
@@ -90,7 +90,7 @@ npm run db:seed
 ```bash
 npm run dev
 
-# Le serveur devrait démarrer sur http://localhost:3001
+# Le serveur devrait démarrer sur http://localhost:3011
 ```
 
 ## ✅ Vérification
@@ -99,13 +99,13 @@ Testez l'API :
 
 ```bash
 # Test simple
-curl http://localhost:3001/health
+curl http://localhost:3011/health
 
 # Devrait retourner :
 # {"status":"ok","timestamp":"..."}
 
 # Récupérer les lieux
-curl http://localhost:3001/api/places
+curl http://localhost:3011/api/places
 ```
 
 ## 🔄 Alternative : Utiliser les migrations (Production)

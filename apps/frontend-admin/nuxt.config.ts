@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Admin panel for managing places and points of interest' },
-        { name: 'theme-color', content: '#7c3aed' },
+        { name: 'theme-color', content: '#2563eb' },
         { name: 'robots', content: 'noindex, nofollow' }
       ],
       link: [
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
   // Runtime config for API
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3001/api'
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3011/api'
     }
   },
 
@@ -66,28 +66,28 @@ export default defineNuxtConfig({
         extend: {
           colors: {
             primary: {
-              50: '#faf5ff',
-              100: '#f3e8ff',
-              200: '#e9d5ff',
-              300: '#d8b4fe',
-              400: '#c084fc',
-              500: '#a855f7',
-              600: '#9333ea',
-              700: '#7c3aed',
-              800: '#6b21a8',
-              900: '#581c87'
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
             },
             admin: {
-              50: '#faf5ff',
-              100: '#f3e8ff',
-              200: '#e9d5ff',
-              300: '#d8b4fe',
-              400: '#c084fc',
-              500: '#a855f7',
-              600: '#9333ea',
-              700: '#7c3aed',
-              800: '#6b21a8',
-              900: '#581c87'
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
             }
           }
         }

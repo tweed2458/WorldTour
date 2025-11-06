@@ -49,10 +49,17 @@ export default async function authRoutes(fastify: FastifyInstance) {
     // Generate JWT
     const token = fastify.jwt.sign({
       id: user.id,
-      email: user.email
+      email: user.email,
+      role: user.role
     })
 
-    return { user, token }
+    return {
+      user: {
+        ...user,
+        role: user.role
+      },
+      token
+    }
   })
 
   // Login
@@ -78,7 +85,8 @@ export default async function authRoutes(fastify: FastifyInstance) {
     // Generate JWT
     const token = fastify.jwt.sign({
       id: user.id,
-      email: user.email
+      email: user.email,
+      role: user.role
     })
 
     // Get user badges
@@ -92,6 +100,7 @@ export default async function authRoutes(fastify: FastifyInstance) {
         id: user.id,
         name: user.name,
         email: user.email,
+        role: user.role,
         interests: user.interests,
         visitedPlaces: user.visitedPlaces,
         badges: badges.map(ub => ({

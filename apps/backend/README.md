@@ -47,7 +47,7 @@ npm run build
 npm start
 ```
 
-The API will be available at `http://localhost:3001`
+The API will be available at `http://localhost:3011`
 
 ## 📚 API Endpoints
 
@@ -104,7 +104,7 @@ Authorization: Bearer YOUR_JWT_TOKEN
 ```env
 DATABASE_URL="postgresql://user:password@localhost:5432/worldtour?schema=public"
 JWT_SECRET="your-secret-key"
-PORT=3001
+PORT=3011
 HOST=0.0.0.0
 ```
 
