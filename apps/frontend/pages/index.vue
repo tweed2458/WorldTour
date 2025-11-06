@@ -23,15 +23,23 @@
         </div>
 
         <!-- Geolocation Button -->
-        <div class="flex justify-center mt-6">
+        <div class="flex flex-col items-center mt-6 gap-2">
           <button
             @click="getNearbyPlaces"
-            class="btn bg-white text-primary-600 hover:bg-primary-50 flex items-center gap-2"
+            class="btn bg-white text-primary-600 hover:bg-primary-50 flex items-center gap-2 transition-all"
             :disabled="loadingLocation"
+            :class="{ 'opacity-70 cursor-not-allowed': loadingLocation }"
           >
-            <Icon name="mdi:crosshairs-gps" class="text-xl" />
-            {{ $t('home.nearMe') }}
+            <Icon
+              :name="loadingLocation ? 'mdi:loading' : 'mdi:crosshairs-gps'"
+              class="text-xl"
+              :class="{ 'animate-spin': loadingLocation }"
+            />
+            {{ loadingLocation ? 'Localisation...' : $t('home.nearMe') }}
           </button>
+          <p v-if="locationError" class="text-red-100 text-sm">
+            {{ locationError }}
+          </p>
         </div>
       </div>
     </section>
@@ -97,6 +105,7 @@ const placesStore = usePlacesStore()
 const userStore = useUserStore()
 const searchBarRef = ref()
 const loadingLocation = ref(false)
+const locationError = ref('')
 
 const nearbyPlaces = computed(() => placesStore.nearbyPlaces)
 const popularPlaces = computed(() => placesStore.popularPlaces)
@@ -118,25 +127,64 @@ const handleSearch = async (query: string, filters: any) => {
 }
 
 const getNearbyPlaces = async () => {
+  // Check if geolocation is supported
   if (!navigator.geolocation) {
-    alert('Geolocation is not supported by your browser')
+    locationError.value = 'La géolocalisation n\'est pas supportée par votre navigateur'
+    setTimeout(() => locationError.value = '', 5000)
     return
   }
 
+  // Reset error and start loading
+  locationError.value = ''
   loadingLocation.value = true
 
   navigator.geolocation.getCurrentPosition(
     async (position) => {
-      await placesStore.fetchNearbyPlaces(
-        position.coords.latitude,
-        position.coords.longitude
-      )
-      loadingLocation.value = false
+      try {
+        await placesStore.fetchNearbyPlaces(
+          position.coords.latitude,
+          position.coords.longitude
+        )
+        loadingLocation.value = false
+
+        // Scroll to results
+        if (nearbyPlaces.value.length > 0) {
+          setTimeout(() => {
+            document.querySelector('section')?.scrollIntoView({ behavior: 'smooth' })
+          }, 100)
+        }
+      } catch (error) {
+        console.error('Fetch nearby error:', error)
+        locationError.value = 'Erreur lors de la récupération des lieux'
+        loadingLocation.value = false
+      }
     },
     (error) => {
       console.error('Geolocation error:', error)
       loadingLocation.value = false
-      alert('Unable to get your location')
+
+      // More specific error messages
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          locationError.value = 'Vous devez autoriser l\'accès à votre position'
+          break
+        case error.POSITION_UNAVAILABLE:
+          locationError.value = 'Position non disponible'
+          break
+        case error.TIMEOUT:
+          locationError.value = 'La demande de localisation a expiré'
+          break
+        default:
+          locationError.value = 'Impossible d\'obtenir votre position'
+      }
+
+      // Clear error after 5 seconds
+      setTimeout(() => locationError.value = '', 5000)
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 0
     }
   )
 }
