@@ -25,7 +25,9 @@
     "searchPlaceholder": "Search for a museum, monument...",
     "nearMe": "Near me",
     "popular": "Popular",
-    "recommended": "Recommended for you"
+    "recommended": "Recommended for you",
+    "radius": "Search radius",
+    "withinRadius": "within {radius}"
   },
   "place": {
     "rating": "Rating",

@@ -25,7 +25,9 @@
     "searchPlaceholder": "Cerca un museo, monumento...",
     "nearMe": "Vicino a me",
     "popular": "Popolari",
-    "recommended": "Consigliati per te"
+    "recommended": "Consigliati per te",
+    "radius": "Raggio di ricerca",
+    "withinRadius": "entro {radius}"
   },
   "place": {
     "rating": "Valutazione",

@@ -22,24 +22,32 @@
           </button>
         </div>
 
-        <!-- Geolocation Button -->
-        <div class="flex flex-col items-center mt-6 gap-2">
-          <button
-            @click="getNearbyPlaces"
-            class="btn bg-white text-primary-600 hover:bg-primary-50 flex items-center gap-2 transition-all"
-            :disabled="loadingLocation"
-            :class="{ 'opacity-70 cursor-not-allowed': loadingLocation }"
-          >
-            <Icon
-              :name="loadingLocation ? 'mdi:loading' : 'mdi:crosshairs-gps'"
-              class="text-xl"
-              :class="{ 'animate-spin': loadingLocation }"
-            />
-            {{ loadingLocation ? 'Localisation...' : $t('home.nearMe') }}
-          </button>
-          <p v-if="locationError" class="text-red-100 text-sm">
-            {{ locationError }}
-          </p>
+        <!-- Geolocation Section -->
+        <div class="mt-8 max-w-2xl mx-auto">
+          <!-- Radius Slider -->
+          <div class="mb-6">
+            <RadiusSlider v-model="searchRadius" />
+          </div>
+
+          <!-- Geolocation Button -->
+          <div class="flex flex-col items-center gap-2">
+            <button
+              @click="getNearbyPlaces"
+              class="btn bg-white text-primary-600 hover:bg-primary-50 flex items-center gap-2 transition-all"
+              :disabled="loadingLocation"
+              :class="{ 'opacity-70 cursor-not-allowed': loadingLocation }"
+            >
+              <Icon
+                :name="loadingLocation ? 'mdi:loading' : 'mdi:crosshairs-gps'"
+                class="text-xl"
+                :class="{ 'animate-spin': loadingLocation }"
+              />
+              {{ loadingLocation ? 'Localisation...' : $t('home.nearMe') }}
+            </button>
+            <p v-if="locationError" class="text-red-100 text-sm">
+              {{ locationError }}
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -106,6 +114,7 @@ const userStore = useUserStore()
 const searchBarRef = ref()
 const loadingLocation = ref(false)
 const locationError = ref('')
+const searchRadius = ref(5000) // Default 5km
 
 const nearbyPlaces = computed(() => placesStore.nearbyPlaces)
 const popularPlaces = computed(() => placesStore.popularPlaces)
@@ -143,7 +152,8 @@ const getNearbyPlaces = async () => {
       try {
         await placesStore.fetchNearbyPlaces(
           position.coords.latitude,
-          position.coords.longitude
+          position.coords.longitude,
+          searchRadius.value
         )
         loadingLocation.value = false
 
